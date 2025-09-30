@@ -6,5 +6,5 @@ def check_even_odd():
     else:
         print(f"{number} is odd")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     check_even_odd()
