@@ -14,6 +14,7 @@ def main():
     marks = float(input("Enter marks obtained: "))
     grade = get_grade(marks)
     print(f"Student: {name}, Marks: {marks}, Grade: {grade}")   
+    print(f"Student: {name}, Marks: {marks}, Grade 1: {grade}")  
     
 if __name__ == "__main__":
     main()
