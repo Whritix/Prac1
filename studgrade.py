@@ -1,21 +1,30 @@
-def get_grade(marks):
-    if marks >= 90:
-        return 'A'
-    if marks >= 80:
-        return 'B'
-    if marks >= 70:
-        return 'C'
-    if marks >= 60: 
-        return 'D'  
-    return 'Fail'
 
-def main():
-    name = input("Enter student's name: ")
-    marks = float(input("Enter marks obtained: "))
-    grade = get_grade(marks)
-    print(f"Student: {name}, Marks: {marks}, Grade: {grade}")   
-    print(f"Student: {name}, Marks: {marks}, Grade 1: {grade}")  
-    
-if __name__ == "__main__":
-    main()
-    
+marks = []   # list to store subject marks
+
+# Accepting marks for 5 subjects
+for i in range(1, 6):
+    m = int(input(f"Enter marks for subject {i}: "))
+    marks.append(m)
+
+# Calculate total and average
+total = sum(marks)
+average = total / 5
+
+# Grade evaluation based on average
+if average >= 90:
+    grade = "A"
+elif average >= 75:
+    grade = "B"
+elif average >= 60:
+    grade = "C"
+elif average >= 40:
+    grade = "D"
+else:
+    grade = "Fail"
+
+# Output
+print("\n--- Result ---")
+print("Marks:", marks)
+print("Total:", total)
+print("Average:", average)
+print("Grade:", grade)
